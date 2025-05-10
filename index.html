@@ -9,50 +9,54 @@
 </head>
 <body>
 
-    <header>
+  <header>
     <img src="img/salena-logo.png" alt="Salena logo" class="logo" />
     <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>      
-    </header>
-
+  </header>
 
   <main>
-
     <section id="projects">
-
       <h2>Selected Projects</h2>
       <p>Explore some of my favorite works below.</p>
 
-      <!-- Project cards go here -->
-      <div class="project-card">
-        <a href="figma-project.html" class="project-card">
-           <img src="img/beautyapp-prototype.png" alt="Figma project thumbnail" style="width: 800px; height: auto;" />
-          <h3>Beauty App Prototype</h3>
-          <p>A mobile app prototype designed in Figma</p>
-        </a>       
+      <!-- Carousel Container -->
+      <div class="carousel-container">
+        <button class="prev-btn">&#10094;</button>
+        <div class="carousel">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <a href="figma-project.html" class="project-card">
+              <img src="img/beautyapp-prototype.png" alt="Figma project thumbnail" />
+              <h3>Beauty App Prototype</h3>
+              <p>A mobile app prototype designed in Figma</p>
+            </a>       
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <a href="nailstudiomila.html" target="_blank" class="project-card">
+              <img src="img/nsm-mockups.png" alt="Nail Studio Mila website thumbnail" />
+              <h3>Nail Studio Mila</h3>
+              <p>Branding, web design, content & social media management</p>
+            </a>
+          </div>  
+        </div>
+        <button class="next-btn">&#10095;</button>
       </div>
-
-      <div class="project-card">
-        <a href="nailstudiomila.html" target="_blank" class="project-card">
-          <img src="img/nsm-mockups.png" alt="Nail Studio Mila website thumbnail" style="width: 800px; height: auto;" />
-          <h3>Nail Studio Mila</h3>
-          <p>Branding, web design, content & social media management</p>
-        </a>
-      </div>      
-      
     </section>
-      
   </main>
-
 
   <footer>
     <p>&copy; 2025 Salena. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
-

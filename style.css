@@ -1,146 +1,231 @@
 /* ========== GLOBAL STYLES ========== */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    color: #222;
-    line-height: 1.6;
-    font-weight: 300;  /* Lichtere tekst */
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  font-weight: 300; /* Lichtere tekst */
+}
 
 strong {
-    font-weight: 550;
+  font-weight: 550;
 }
-  
-  /* ========== HEADER ========== */
-  header {
-    background-color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  }
-  
-  .logo {
-    display: block;
-    margin: 0 auto;
-    max-width: 300;
-    height: auto;
-  }
-  
-  /* ========== NAVIGATION ========== */
-  nav {
-    margin-top: 1rem;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+/* ========== HEADER ========== */
+header {
+  background-color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  margin-top: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: black;
+  width: 0;
+  transition: width 0.3s ease;
+  margin: auto;
+}
+
+.nav-menu li a:hover {
+  color: #D9CDBF;
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif; /* Gebruik hetzelfde font als de body */
+  font-weight: 500; /* Een beetje dikker dan de normale body tekst voor nadruk */
+  line-height: 1.3; /* Aangepaste line-height voor de koppen */
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+/* ========== PROJECT CARDS  ========== */
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ========== CAROUSEL STYLING ========== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .project-card {
+  flex: 0 0 100%; /* Zorgt ervoor dat elke kaart 100% van de containerbreedte in beslag neemt */
+  box-sizing: border-box;
+}
+
+/* ========== CAROUSEL KNOPPEN STYLING ========== */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px; /* Dit maakt de knoppen groter zodat ze een perfecte cirkel kunnen zijn */
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%; /* Maakt de knop een perfecte cirkel */
+    width: 50px; /* De breedte van de cirkel */
+    height: 50px; /* De hoogte van de cirkel */
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .nav-menu li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: black;
-    width: 0;
-    transition: width 0.3s ease;
-    margin: auto;
-  }
-  
-  .nav-menu li a:hover {
-    color: #D9CDBF;
-  }
-  
-  .nav-menu li a:hover::after {
-    width: 100%;
-  }
-  
-  /* ========== MAIN CONTENT ========== */
-  main {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  
-  section {
-    margin-bottom: 4rem;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif; /* Gebruik hetzelfde font als de body */
-    font-weight: 500; /* Een beetje dikker dan de normale body tekst voor nadruk */
-    line-height: 1.3; /* Aangepaste line-height voor de koppen */
-  }
-  
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  h3 {
-    font-weight: 400;
-  }
+    align-items: center; /* Zorgt ervoor dat de tekst gecentreerd wordt in de knop */
+    justify-content: center; /* Zorgt ervoor dat de tekst gecentreerd wordt in de knop */
+}
 
- /* ========== PROJECT CARDS  ========== */
-  .project-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
-  }
-  .project-card:hover {
-    transform: scale(1.02);
-  }
-  
+.prev-btn {
+    left: 10px;
+}
 
-  /* ========== LINKS ========== */
-  a {
-    color: black;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #D9CDBF;
-    font-weight: 600;
-    transform: scale(1.1); /* Maak de tekst 10% groter */
-  }
-  
-  /* ========== FOOTER ========== */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: white;
-    color: black;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* ========== RESPONSIVE DESIGN ========== */
-  @media (max-width: 600px) {
-    .nav-menu {
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Een iets donkerder effect wanneer je over de knop hoverd */
+}
+
+/* Verander de kleur van de iconen in de knoppen (optioneel) */
+.prev-btn i,
+.next-btn i {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* ========== LINKS ========== */
+a {
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #D9CDBF;
+  font-weight: 600;
+  transform: scale(1.1); /* Maak de tekst 10% groter */
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: white;
+  color: black;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 600px) {
+  .nav-menu {
       gap: 1rem;
       flex-direction: column;
-    }
-  
-    .logo {
+  }
+
+  .logo {
       max-width: 180px;
-    }
+  }
+
+  .carousel-container {
+      width: 100%;
   }
   
-
-  
+  .carousel .project-card {
+      flex: 0 0 100%; /* Zorgt ervoor dat elke kaart 100% van de containerbreedte in beslag neemt */
+  }
+}
