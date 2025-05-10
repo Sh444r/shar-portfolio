@@ -62,7 +62,7 @@ strong {
   }
   
   .nav-menu li a:hover {
-    color: #4a148c;
+    color: #D9CDBF;
   }
   
   .nav-menu li a:hover::after {
@@ -93,6 +93,18 @@ strong {
   h3 {
     font-weight: 400;
   }
+
+ /* ========== PROJECT CARDS  ========== */
+  .project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+  }
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+  
 
   /* ========== LINKS ========== */
   a {
@@ -130,4 +142,5 @@ strong {
     }
   }
   
+
   
