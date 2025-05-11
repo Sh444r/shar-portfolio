@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
+  background-color: white;
   color: #222;
   line-height: 1.6;
   font-weight: 300; /* Lichtere tekst */
@@ -24,8 +24,49 @@ header {
 .logo {
   display: block;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 850px;
   height: auto;
+}
+
+.hero-section {
+  background-image: url('img/roses.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: -8rem;
+  font-weight: lighter;
 }
 
 /* ========== NAVIGATION ========== */
@@ -45,7 +86,7 @@ nav {
 
 .nav-menu li a {
   text-decoration: none;
-  color: black;
+  color: #BF0A19;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -62,14 +103,75 @@ nav {
 }
 
 .nav-menu li a:hover {
-  color: #D9CDBF;
+  color: #D99C9C;
 }
 
 .nav-menu li a:hover::after {
   width: 100%;
 }
 
+/* Red header for other pages */
+.red-header {
+  background-color: #BF0A19;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.red-header .logo {
+  max-height: 150px;
+}
+
+.red-header .nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: -0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+
+.red-header .nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.red-header .nav-menu li a:hover {
+  opacity: 0.8;
+}
+
 /* ========== MAIN CONTENT ========== */
+
+/* Home page specific styling */
+.home-page {
+  text-align: center; /* This will center all text inside the home page */
+}
+
+.home-page h1, .home-page h2, .home-page p {
+  text-align: center; /* Ensure that all headings and paragraphs are centered */
+}
+
+/* You can also adjust any specific elements within the main content here */
+.home-page .carousel-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center the carousel container */
+  align-items: center;
+}
+
+.home-page .project-card {
+  margin-bottom: 1rem;
+  /* Additional styling for cards, if necessary */
+}
+
+
 main {
   max-width: 800px;
   margin: 3rem auto;
@@ -207,7 +309,8 @@ footer {
   background-color: white;
   color: black;
   font-size: 0.9rem;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); */
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
